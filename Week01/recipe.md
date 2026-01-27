@@ -17,9 +17,3 @@
 3. Mix in chocolate chips.
 4. Microwave on high for **60 to 90 seconds** until the cake rises and sets.
 5. *Let it cool before eating.*
-
----
-
-## Notes
-- **Microwave times vary**, so start at 60 seconds and add time if needed.
-- Best eaten **right after it cools**.
