@@ -40,3 +40,15 @@ Image - <img src="xyz.jpg"/>
 
 
 
+
+
+CSS (Cascading Style Sheets) 
+- Style sheet consists of set of rules
+- Each rule consists of one of more selectors and a declaration block
+- A declaration block consists of a list of declarations in curly braces
+- Declaration consists of a property, a colon, a value and then a semi colon
+
+Scopes - Local (single element) > Internal(one page) > External(multiple pages)
+
+
+
