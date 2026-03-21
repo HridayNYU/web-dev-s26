@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flexbox Layouts</title>
+    <!-- https://fonts.google.com/icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_circle_up"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h2>Default</h2>
+    <div class="container">
+      <div class="item center">1</div>
+      <div class="item center">2</div>
+      <div class="item center">3</div>
+      <div class="item center">4</div>
+    </div>
+
+    <h2>Justify Center, Align Center</h2>
+    <div class="container justify-start align-start">
+      <div class="item center">1</div>
+      <div class="item center">2</div>
+      <div class="item center">3</div>
+      <div class="item center">4</div>
+    </div>
+
+    <h2>Justify Between, Align Center</h2>
+    <div class="container justify-between align-stretch">
+      <div class="item center">1</div>
+      <div class="item center">2</div>
+      <div class="item center">3</div>
+      <div class="item center">4</div>
+    </div>
+
+    <h2>Justify Around, Align Center</h2>
+    <div class="container justify-around align-center">
+      <div class="item center">1</div>
+      <div class="item center">2</div>
+      <div class="item center">3</div>
+      <div class="item center">4</div>
+    </div>
+
+    <h2>Justify Evenly, Align Center, Align self</h2>
+    <div class="container justify-even align-center">
+      <div class="item center">1</div>
+      <div class="item center align-self">2</div>
+      <div class="item center">3</div>
+      <div class="item center">4</div>
+    </div>
+
+    <hr />
+
+    <header>
+      <h2>Logo here</h2>
+      <h2>Nav here</h2>
+    </header>
+
+    <main>
+      <div class="grid=item">
+        <img 
+          src="https://placecats.com/g/400/400" 
+          alt="Adorable Cat in image grid" />
+      </div>
+    </main>
+    <aside class="secondary-nav">
+      <h3>secondary nav</h3>
+      <nav>
+        <ul class="Menu">
+          <li> <a href="#"><span></span></a> </li>
+        </ul>
+      </nav>
+    </aside>
+  </body>
+</html>

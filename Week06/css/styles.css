@@ -1,0 +1,101 @@
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Flexbox Container and Item Styles */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* Some styles so we can see our countiners */
+  border: 1px solid purple;
+  background-color: rgba(255, 0, 255, 0.3);
+  min-height: 400px;
+}
+.item {
+  width: 21%;
+  height: 300px;
+  border: 1px solid cornflowerblue;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+/* Atomic CSS design Pattern */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Justify content */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-even {
+  justify-content: space-evenly;
+}
+
+/* Align items */
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-self {
+  align-self: stretch;
+  /* Needed when flex items have set height */
+  height: auto;
+}
+
+/* Anything smaller than 768px width aka mobile phone */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .align-self,
+  .align-self{
+    height: 300px;
+    width: auto;
+  }
+}
+
+
