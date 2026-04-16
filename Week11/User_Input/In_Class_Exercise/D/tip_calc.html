@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tip Calculator</title>
+    <style type="text/css">
+      .container {
+        width: 300px;
+        margin: 0 auto;
+        line-height: 40px;
+        margin-top: 5%;
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .well {
+        border-radius: 10px;
+        background-color: #ddd;
+        min-height: 100px;
+        padding: 20px;
+        margin-top: 10px;
+      }
+
+      .container button {
+        width: 100%;
+        padding: 10px 0;
+        border: 2px solid gray;
+        cursor: pointer;
+        margin: 10px 0;
+        color: white;
+        background-color: #333;
+        transition: background-color 1s ease;
+      }
+
+      .container button:hover {
+        background-color: #777;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 10px 0;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tip Calculator</h1>
+
+      <form id="tipForm">
+        <label for="bill">What is the total bill?</label>
+        <input
+          type="number"
+          name="bill"
+          id="bill"
+          min="0"
+          step="0.01"
+          required
+        />
+
+        <br />
+
+        <label><input type="radio" name="tip" value="0.05" />5%</label>
+        <label><input type="radio" name="tip" value="0.10" />10%</label>
+        <label><input type="radio" name="tip" value="0.15" checked />15%</label>
+        <label><input type="radio" name="tip" value="0.20" />20%</label>
+
+        <button type="submit" id="calcBtn">Calculate Tip</button>
+      </form>
+
+      <div class="well" id="output"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("calcBtn").addEventListener("click", calcTip);
+      });
+
+      const calcTip = (event) => {
+        event.preventDefault();
+
+        let result = document.getElementById("output");
+        result.innerHTML = "";
+
+        let bill = document.getElementById("bill").value;
+        bill = parseFloat(bill);
+
+        let per;
+        let tip;
+        let total;
+
+        let arrTip = document.getElementsByName("tip");
+
+        for (let i = 0; i < arrTip.length; i++) {
+          if (arrTip[i].checked) {
+            per = parseFloat(arrTip[i].value);
+            break;
+          }
+        }
+
+        tip = bill * per;
+        tip = moneyRound(tip);
+
+        total = bill + tip;
+        total = moneyRound(total);
+
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+        let p3 = document.createElement("p");
+        let p4 = document.createElement("p");
+
+        let t1 = document.createTextNode(`Bill: $${bill.toFixed(2)}`);
+        let t2 = document.createTextNode(`Tip percentage: ${per * 100}%`);
+        let t3 = document.createTextNode(`Calculated Tip: $${tip.toFixed(2)}`);
+        let t4 = document.createTextNode(`Total: $${total.toFixed(2)}`);
+
+        p1.appendChild(t1);
+        p2.appendChild(t2);
+        p3.appendChild(t3);
+        p4.appendChild(t4);
+
+        result.appendChild(p1);
+        result.appendChild(p2);
+        result.appendChild(p3);
+        result.appendChild(p4);
+      };
+
+      const moneyRound = (num) => {
+        return Math.ceil(num * 100) / 100;
+      };
+    </script>
+  </body>
+</html>
