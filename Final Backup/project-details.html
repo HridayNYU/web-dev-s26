@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDM Hub | Project Details</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="top">
+      <div class="logo-area">
+        <img src="images/NYU-Logo-768x432.png" alt="NYU logo" class="logo-img" />
+        <div class="site-name">IDM Hub</div>
+      </div>
+
+      <nav class="nav">
+        <a href="Index.html">Home</a>
+        <a href="teams.html" class="active">Teams</a>
+        <a href="alumni.html">Alumni</a>
+      </nav>
+
+      <div class="top-right">
+        <a href="myprofile.html">
+          <img src="images/cropped.jpg" alt="Profile picture" class="nav-profile-pic" />
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1 id="detailTitle">Project Title</h1>
+        <p id="detailDescription">Project description will appear here.</p>
+      </section>
+
+      <div class="layout">
+        <div class="main">
+          <section class="section">
+            <div class="profile-box">
+              <div class="project-header-row">
+                <div>
+                  <h2 class="project-title">Project Overview</h2>
+                  <div class="meta" id="detailAuthor">Posted by IDM Student</div>
+                </div>
+
+                <span class="post-tag" id="detailCategory">Category</span>
+              </div>
+
+              <div class="skills-row">
+                <span class="skill-tag" id="detailSkills">Skills</span>
+              </div>
+
+              <div class="project-section">
+                <h3>Overview</h3>
+                <p class="project-text" id="detailOverview"></p>
+              </div>
+
+              <div class="project-section">
+                <h3>Timeline</h3>
+                <p class="project-text" id="detailTimeline"></p>
+              </div>
+
+              <div class="project-section">
+                <h3>Current Team</h3>
+                <p class="project-text" id="detailTeam"></p>
+              </div>
+
+              <div class="team-actions">
+                <a href="teams.html" class="btn outline small-btn">Back</a>
+                <button class="btn small-btn" onclick="joinProject(this)">
+                  Accept Project
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <div class="side-box">
+            <h3>Project Info</h3>
+            <p class="sub">This page loads the project selected from the Teams page.</p>
+            <p class="sub">The data is stored using localStorage.</p>
+          </div>
+
+          <div class="side-box">
+            <h3>Why Join</h3>
+            <p class="sub">Build a portfolio piece</p>
+            <p class="sub">Work with other IDM students</p>
+            <p class="sub">Practice collaboration</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

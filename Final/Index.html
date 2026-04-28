@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDM Hub | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="bgCanvas"></canvas>
+    <header class="top">
+      <div class="logo-area">
+        <img
+          src="images/NYU-Logo-768x432.png"
+          alt="NYU logo"
+          class="logo-img"
+        />
+        <div class="site-name">IDM Hub</div>
+      </div>
+
+      <nav class="nav">
+        <a href="Index.html" class="active">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="alumni.html">Alumni</a>
+      </nav>
+
+      <div class="top-right">
+        <a href="myprofile.html">
+          <img
+            src="images/cropped.jpg"
+            alt="Profile picture"
+            class="nav-profile-pic"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Home</h1>
+        <p>
+          A space for IDM students to showcase projects, find teammates, and
+          connect with alumni.
+        </p>
+      </section>
+
+      <div class="layout">
+        <div class="main">
+          <!-- PROFILE -->
+          <section class="section">
+            <div class="section-header">
+              <h2>My Profile</h2>
+            </div>
+
+            <div class="profile-box">
+              <div class="profile-top">
+                <img
+                  src="images/cropped.jpg"
+                  alt="Profile picture"
+                  class="profile-pic"
+                />
+
+                <div class="profile-info">
+                  <h3>Hriday Agrawal</h3>
+                  <p class="sub">
+                    IDM student interested in UX, 3D design, web development,
+                    and creative technology.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skills-row">
+                <span class="skill-tag">UX Research</span>
+                <span class="skill-tag">Blender</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Figma</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- SHOWCASES -->
+          <section class="section">
+            <div class="section-header">
+              <h2>Upcoming Showcases</h2>
+            </div>
+
+            <div class="card-grid">
+              <!-- Projection -->
+              <div class="card image-card">
+                <img src="images/showcase-performance.png" class="card-image" />
+
+                <div class="label">Projection</div>
+
+                <h3>Projection Design Showcase</h3>
+
+                <p>
+                  Student projects using projection, motion, installation, and
+                  spatial storytelling.
+                </p>
+
+                <div class="meta">Featured Student Work - 30th March</div>
+              </div>
+
+              <!-- Creative -->
+              <div class="card image-card">
+                <img src="images/showcase-creative.png" class="card-image" />
+
+                <div class="label">Creative Tech</div>
+
+                <h3>Creative Technology Showcase</h3>
+
+                <p>
+                  Interactive builds involving code, physical computing, motion,
+                  sound, and immersive experiences.
+                </p>
+
+                <div class="meta">Hands-On Project Display - 5th April</div>
+              </div>
+
+              <!-- VR -->
+              <div class="card image-card">
+                <img src="images/showcase-vr.png" class="card-image" />
+
+                <div class="label">VR</div>
+
+                <h3>VR and Immersive Design Showcase</h3>
+
+                <p>
+                  Student work exploring virtual reality, immersive
+                  environments, and interactive experience design.
+                </p>
+
+                <div class="meta">Visual Portfolio Work - 20th April</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- UPDATES -->
+          <section class="section">
+            <div class="section-header">
+              <h2>Updates</h2>
+            </div>
+
+            <div class="list-box">
+              <div class="list-row">
+                <strong>Midterm moved</strong>
+                <div class="sub">
+                  The website midterm presentation has been moved to next week.
+                </div>
+              </div>
+
+              <div class="list-row">
+                <strong>IDM Career Fair</strong>
+                <div class="sub">
+                  The IDM Career Fair will be held on April 18 at 2:00 PM in the
+                  MakerSpace.
+                </div>
+              </div>
+
+              <div class="list-row">
+                <strong>Risograph operator needed</strong>
+                <div class="sub">
+                  A student assistant is needed to help operate the risograph
+                  printer for upcoming print projects.
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+          <div class="side-box">
+            <h3>IDM Resources</h3>
+            <a href="https://idm.engineering.nyu.edu/" target="_blank"
+              >IDM Website</a
+            >
+            <a
+              href="https://bulletins.nyu.edu/undergraduate/engineering/programs/integrated-design-media-bs/"
+              target="_blank"
+              >IDM Bulletin</a
+            >
+            <a href="https://www.linkedin.com/groups/8684560/" target="_blank"
+              >IDM LinkedIn</a
+            >
+            <a href="teams.html">Find Teammates</a>
+            <a href="alumni.html">View Alumni</a>
+          </div>
+
+          <div class="side-box">
+            <h3>Website Updates</h3>
+            <p class="sub">
+              Home page showcase cards were added for a stronger landing page.
+            </p>
+            <p class="sub">
+              Team posts were cleaned up to make the page easier to present.
+            </p>
+            <p class="sub">
+              Navigation and layout were made more consistent across all pages.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

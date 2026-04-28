@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDM Hub | My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="bgCanvas"></canvas>
+    <header class="top">
+      <div class="logo-area">
+        <img
+          src="images/NYU-Logo-768x432.png"
+          alt="NYU logo"
+          class="logo-img"
+        />
+        <div class="site-name">IDM Hub</div>
+      </div>
+
+      <nav class="nav">
+        <a href="Index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="alumni.html">Alumni</a>
+      </nav>
+
+      <div class="top-right">
+        <a href="myprofile.html">
+          <img
+            src="images/cropped.jpg"
+            alt="Profile picture"
+            class="nav-profile-pic"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>My Profile</h1>
+        <p>Edit your profile information, skills, and personal description.</p>
+      </section>
+
+      <div class="layout">
+        <div class="main">
+          <div class="profile-box">
+            <!-- header row -->
+            <div class="profile-header">
+              <h2>Profile Details</h2>
+
+              <button
+                class="btn small-btn edit-profile-btn"
+                onclick="openProfileForm()"
+              >
+                Edit Profile
+              </button>
+            </div>
+
+            <!-- top info -->
+            <div class="profile-top">
+              <img
+                src="images/cropped.jpg"
+                alt="Profile picture"
+                class="profile-pic"
+              />
+
+              <div class="profile-info">
+                <h3 id="profileName">Hriday Agrawal</h3>
+                <p class="sub" id="profileBio">
+                  First year IDM student from Mumbai, interested in UX, 3D
+                  design, web development, and UI/UX.
+                </p>
+              </div>
+            </div>
+
+            <!-- skills -->
+            <div class="skills-row" id="profileSkills">
+              <span class="skill-tag">UX Research</span>
+              <span class="skill-tag">Blender</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Arduino</span>
+              <span class="skill-tag">Figma</span>
+            </div>
+          </div>
+
+          <!-- about -->
+          <section class="section">
+            <div class="section-header">
+              <h2>About Me</h2>
+            </div>
+
+            <div class="side-box">
+              <p class="sub" id="profileAbout">
+                I am interested in user experience, 3D design, and game
+                development. I am comfortable with multiple coding languages,
+                game engines, Adobe tools, and 3D software.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+          <div class="side-box">
+            <h3>My Links</h3>
+            <a
+              href="https://www.linkedin.com/in/hridayagrawal/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+            <a href="https://hridayagrawal.com/" target="_blank"> Portfolio </a>
+          </div>
+
+          <div class="side-box">
+            <h3>Quick Info</h3>
+            <p class="sub">Major: Integrated Design and Media</p>
+            <p class="sub">Minor: Business in Entertainment, Media and Tech</p>
+            <p class="sub">Year: Freshman</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- modal -->
+    <div id="profileModal" class="modal hidden">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h2>Edit Profile</h2>
+          <button class="close-btn" onclick="closeProfileForm()">×</button>
+        </div>
+
+        <label>Name</label>
+        <input id="nameInput" type="text" />
+
+        <label>Short Bio</label>
+        <textarea id="bioInput"></textarea>
+
+        <label>About Me</label>
+        <textarea id="aboutInput"></textarea>
+
+        <label>Skills</label>
+        <input
+          id="skillsInput"
+          type="text"
+          placeholder="UX Research, Blender, HTML"
+        />
+
+        <div class="modal-actions">
+          <button class="btn outline small-btn" onclick="closeProfileForm()">
+            Cancel
+          </button>
+
+          <button class="btn small-btn" onclick="saveProfile()">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
